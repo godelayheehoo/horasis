@@ -1,8 +1,11 @@
 #include "midi.h"
 #include "config.h"
 #include "hardware/uart.h"
+#include "layout.h"
 #include "pico/stdlib.h"
 
+extern int activeChannelCount; // From layout.cpp
+#include <cstdio>
 
 // MIDI parser state machine
 enum MidiState { WAITING_STATUS, WAITING_DATA1, WAITING_DATA2 };
@@ -62,6 +65,10 @@ static void handleControlChange(uint8_t channel, uint8_t controller,
 // ============================================================================
 
 static void processByte(uint8_t b) {
+  // DEBUG: Simple parser trace
+  if (b < 0xF8) { // Ignore clock
+    printf("Parser[%d] Byte: %02X\n", state, b);
+  }
   // Handle SysEx mode
   if (inSysEx) {
     if (b == 0xF7) {
@@ -94,6 +101,7 @@ static void processByte(uint8_t b) {
     currentStatus = b;
     runningStatus = b;
     state = WAITING_DATA1;
+    // printf("State -> WAITING_DATA1\n");
     return;
   }
 
@@ -139,6 +147,8 @@ static void processByte(uint8_t b) {
     uint8_t msgType = getMessageType(currentStatus);
 
     // Dispatch message
+    printf("Dispatch! Ch:%d Msg:%02X D1:%02X D2:%02X\n", channel, msgType,
+           data1, data2);
     switch (msgType) {
     case 0x80: // Note Off
       handleNoteOff(channel, data1, data2);
@@ -178,14 +188,17 @@ void midi_init() {
   // Configure UART: 8 data bits, 1 stop bit, no parity
   uart_set_format(MIDI_UART_ID, 8, 1, UART_PARITY_NONE);
 
-  // Disable FIFO (we're polling, not using interrupts)
-  uart_set_fifo_enabled(MIDI_UART_ID, false);
+  // Enable FIFO (we're polling, but need buffering while LEDs update)
+  uart_set_fifo_enabled(MIDI_UART_ID, true);
 }
 
 void midi_poll() {
   // Read all available bytes
   while (uart_is_readable(MIDI_UART_ID)) {
     uint8_t b = uart_getc(MIDI_UART_ID);
+    if (b != 0xF8) {
+      printf("MIDI: %02X\n", b); // DEBUG
+    }
     processByte(b);
   }
 }

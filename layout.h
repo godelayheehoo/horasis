@@ -4,23 +4,28 @@
 #include "config.h"
 #include <stdint.h>
 
-
 // ============================================================================
 // Data Structures
 // ============================================================================
 
+// 2D Rectangle for layout
+typedef struct {
+  int x;
+  int y;
+  int w;
+  int h;
+} Rect;
+
 struct NoteEntry {
-  bool seen;       // Has this note ever fired on this channel?
-  bool active;     // Is a note-on currently held?
-  int regionStart; // First LED index in this note's sub-region
-  int regionSize;  // Number of LEDs in this note's sub-region
+  bool seen;   // Has this note ever fired on this channel?
+  bool active; // Is a note-on currently held?
+  Rect bounds; // 2D Bounds
 };
 
 struct ChannelEntry {
   bool seen;         // Has this channel been detected?
   uint32_t color;    // GRB color assigned at first detection
-  int regionStart;   // First LED index of channel's region
-  int regionSize;    // Number of LEDs in channel's region
+  Rect bounds;       // 2D Bounds
   int seenNoteCount; // How many distinct notes seen so far
   NoteEntry notes[MAX_NOTES];
 };
@@ -38,6 +43,9 @@ extern int activeChannelCount;
 
 // Initialize layout engine (zero all state)
 void layout_init();
+
+// Reset all layout state (clear all channels/notes)
+void layout_reset();
 
 // Register a channel (if not already seen) and assign color
 void registerChannel(int channel);

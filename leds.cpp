@@ -29,45 +29,66 @@ static int dma_chan;
 //   Starts at Top-Left (x=32, y=0).
 //   Snakes Right.
 //   Col 32 goes DOWN. Col 33 goes UP.
+// 32x16 Grid (Two 8x32 Panels Stacked)
+// Vertical Column-Major Wiring
+//
+// Panel 1 (Top, y=0..7):
+//   Logical x=0..31.
+//   Physically starts at Top-Right, fills Leftwards.
+//   Indices 0..255.
+//
+// Panel 2 (Bottom, y=8..15):
+//   Logical x=0..31.
+//   Physically starts at Top-Left, fills Rightwards.
+//   Indices 256..511.
+
 static int xyToIndex(int x, int y) {
   if (x < 0 || x >= PANEL_WIDTH || y < 0 || y >= PANEL_HEIGHT) {
-    return -1; // Out of bounds
+    return -1;
   }
 
-  if (x < 32) {
-    // === PANEL 1 (Left) ===
-    // Columns processed: 31, 30, ..., 0
-    int col_from_start = 31 - x;
-    int base = col_from_start * 8; // 8 rows
+  int panel_base = 0;
+  int local_y = y;
 
-    if (col_from_start % 2 == 0) {
-      // Even columns (31, 29, ...): Down
-      return base + y;
+  // Check which panel (Top or Bottom)
+  if (y < 8) {
+    // === PANEL 1 (Top) ===
+    // Indices 0..255
+    // Maps x=0..31 to Physical Cols 31..0
+    panel_base = 0;
+    local_y = y;
+
+    // Physical Column (31 - x)
+    int col_idx = 31 - x;
+    int base = panel_base + (col_idx * 8);
+
+    // Serpentine
+    if (col_idx % 2 == 0) {
+      return base + local_y; // Down
     } else {
-      // Odd columns (30, 28, ...): Up
-      return base + (7 - y);
+      return base + (7 - local_y); // Up
     }
   } else {
-    // === PANEL 2 (Right) ===
-    // Starts after 256 LEDs
-    int base_panel2 = 256;
-    // Columns processed: 32, 33, ..., 63
-    int col_from_start = x - 32;
-    int base = base_panel2 + (col_from_start * 8);
+    // === PANEL 2 (Bottom) ===
+    // Indices 256..511
+    // Maps x=0..31 to Physical Cols 0..31
+    panel_base = 256;
+    local_y = y - 8; // Offset y to 0..7
 
-    if (col_from_start % 2 == 0) {
-      // Even columns (32, 34, ...): Down
-      return base + y;
+    // Physical Column (x)
+    int col_idx = x;
+    int base = panel_base + (col_idx * 8);
+
+    // Serpentine
+    if (col_idx % 2 == 0) {
+      return base + local_y; // Down
     } else {
-      // Odd columns (33, 35, ...): Up
-      return base + (7 - y);
+      return base + (7 - local_y); // Up
     }
   }
 }
 
-// ============================================================================
-// Public API
-// ============================================================================
+// ... Public API ...
 
 void leds_init() {
   // Clear framebuffer
@@ -95,10 +116,22 @@ void leds_init() {
   );
 }
 
-void leds_setPixel(int x, int y, uint32_t grb) {
+void leds_setPixel(int x, int y, uint32_t rgb) {
+  // Input RGB: 0x00RRGGBB
   int idx = xyToIndex(x, y);
   if (idx >= 0 && idx < LED_COUNT) {
-    framebuffer[idx] = grb;
+    uint8_t r = (rgb >> 16) & 0xFF;
+    uint8_t g = (rgb >> 8) & 0xFF;
+    uint8_t b = rgb & 0xFF;
+
+    // Scale by brightness
+    r = (r * LED_BRIGHTNESS) >> 8;
+    g = (g * LED_BRIGHTNESS) >> 8;
+    b = (b * LED_BRIGHTNESS) >> 8;
+
+    // Convert to GRB for WS2812 (0x00GGRRBB)
+    uint32_t grb = ((uint32_t)g << 16) | ((uint32_t)r << 8) | b;
+    framebuffer[idx] = grb << 8;
   }
 }
 
@@ -117,29 +150,17 @@ void leds_clear() {
 }
 
 void leds_startup_sequence() {
-  // Cyan: 0x00CCCC (G=CC, R=00, B=CC)
-  // WS2812B expects GRB format.
-  // 0xCC (Green) 0x00 (Red) 0xCC (Blue) -> 0xCC00CC in uint32_t 0xGGRRBB?
-  // Wait, config.h says:
-  // 0x00CCCC, // ch 6  cyan (R=00, G=CC, B=CC)
-  // But leds_setPixel takes GRB?
-  // "Encode as 0xGGRRBB in the 24 low bits"
-  // So Cyan (R=00, G=CC, B=CC) -> G=CC, R=00, B=CC -> 0xCC00CC.
+  // Debug Sequence: Red -> Green -> Blue -> Cyan
+  uint32_t colors[] = {0xFF0000, 0x00FF00, 0x0000FF, 0x00FFFF};
 
-  uint32_t color = 0xCC00CC; // Cyan in 0xGGRRBB format
-
-  for (int x = 0; x < PANEL_WIDTH; x += 8) {
+  for (int i = 0; i < 4; i++) {
+    uint32_t c = colors[i];
     leds_clear();
-
-    // Draw 8x8 square
-    for (int dx = 0; dx < 8; dx++) {
-      for (int dy = 0; dy < 8; dy++) {
-        leds_setPixel(x + dx, dy, color);
-      }
+    for (int j = 0; j < LED_COUNT; j++) {
+      leds_setPixel(j % PANEL_WIDTH, j / PANEL_WIDTH, c);
     }
-
     leds_show();
-    sleep_ms(200);
+    sleep_ms(500);
   }
 
   leds_clear();

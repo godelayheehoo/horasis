@@ -13,13 +13,20 @@
 // WS2812B LED data output (PIO0, SM0)
 #define LED_PIN 2
 
-// ============================================================================
-// LED Panel Configuration
-// ============================================================================
+// Reset Button (Active Low, Pull-Up)
+#define RESET_BTN_PIN 3
 
-#define PANEL_WIDTH 64
-#define PANEL_HEIGHT 8
+// Stacked Layout:
+// Panel 1 (Top): 32x8
+// Panel 2 (Bottom): 32x8
+// Total: 32x16
+#define PANEL_WIDTH 32
+#define PANEL_HEIGHT 16
 #define LED_COUNT (PANEL_WIDTH * PANEL_HEIGHT) // 512 LEDs
+
+// Global brightness (0-255). 255 is max brightness.
+// 128 is ~50%. Lower values reduce power consumption.
+#define LED_BRIGHTNESS 128
 
 // ============================================================================
 // MIDI Configuration
