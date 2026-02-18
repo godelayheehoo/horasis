@@ -1,11 +1,7 @@
 CMakeFiles/midi_leds.dir/main.cpp.o: \
  /home/james/projects/led_grid/main.cpp \
  /home/james/projects/led_grid/config.h \
- /home/james/projects/led_grid/layout.h \
- /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
- /home/james/projects/led_grid/leds.h \
- /home/james/projects/led_grid/midi.h \
- /home/james/pico-sdk/src/common/pico_stdlib_headers/include/pico/stdlib.h \
+ /home/james/pico-sdk/src/rp2_common/hardware_sync/include/hardware/sync.h \
  /home/james/pico-sdk/src/common/pico_base_headers/include/pico.h \
  /home/james/pico-sdk/src/common/pico_base_headers/include/pico/types.h \
  /home/james/pico-sdk/src/common/pico_base_headers/include/pico/assert.h \
@@ -19,6 +15,7 @@ CMakeFiles/midi_leds.dir/main.cpp.o: \
  /usr/include/newlib/newlib.h /usr/include/newlib/_newlib_version.h \
  /usr/include/newlib/sys/config.h /usr/include/newlib/machine/ieeefp.h \
  /usr/include/newlib/sys/features.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
  /home/james/projects/led_grid/build/generated/pico_base/pico/version.h \
  /home/james/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
@@ -37,14 +34,19 @@ CMakeFiles/midi_leds.dir/main.cpp.o: \
  /home/james/pico-sdk/src/rp2350/hardware_regs/include/hardware/regs/addressmap.h \
  /home/james/pico-sdk/src/rp2350/hardware_regs/include/hardware/regs/sio.h \
  /home/james/pico-sdk/src/common/pico_base_headers/include/pico/error.h \
+ /home/james/pico-sdk/src/rp2_common/hardware_base/include/hardware/address_mapped.h \
+ /home/james/pico-sdk/src/rp2350/hardware_structs/include/hardware/structs/accessctrl.h \
+ /home/james/pico-sdk/src/rp2350/hardware_regs/include/hardware/regs/accessctrl.h \
+ /home/james/pico-sdk/src/rp2_common/hardware_sync_spin_lock/include/hardware/sync/spin_lock.h \
+ /home/james/projects/led_grid/layout.h \
+ /home/james/projects/led_grid/leds.h \
+ /home/james/projects/led_grid/midi.h \
+ /home/james/pico-sdk/src/common/pico_stdlib_headers/include/pico/stdlib.h \
  /home/james/pico-sdk/src/rp2_common/pico_stdio/include/pico/stdio.h \
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/james/pico-sdk/src/common/pico_time/include/pico/time.h \
  /home/james/pico-sdk/src/rp2_common/hardware_timer/include/hardware/timer.h \
  /home/james/pico-sdk/src/rp2350/hardware_structs/include/hardware/structs/timer.h \
- /home/james/pico-sdk/src/rp2_common/hardware_base/include/hardware/address_mapped.h \
- /home/james/pico-sdk/src/rp2350/hardware_structs/include/hardware/structs/accessctrl.h \
- /home/james/pico-sdk/src/rp2350/hardware_regs/include/hardware/regs/accessctrl.h \
  /home/james/pico-sdk/src/rp2350/hardware_regs/include/hardware/regs/timer.h \
  /home/james/pico-sdk/src/rp2350/hardware_regs/include/hardware/regs/intctrl.h \
  /home/james/pico-sdk/src/rp2_common/hardware_gpio/include/hardware/gpio.h \
