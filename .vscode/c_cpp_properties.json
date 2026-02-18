@@ -1,0 +1,23 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "/home/james/pico-sdk/src/**",
+                "/home/james/pico-sdk/src/common/**",
+                "/home/james/pico-sdk/src/rp2_common/**",
+                "/home/james/pico-sdk/src/rp2040/**"
+            ],
+            "defines": [
+                "PICO_BOARD=pico",
+                "StartLine=1"
+            ],
+            "compilerPath": "/usr/bin/arm-none-eabi-g++",
+            "cStandard": "c17",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "linux-gcc-arm"
+        }
+    ],
+    "version": 4
+}

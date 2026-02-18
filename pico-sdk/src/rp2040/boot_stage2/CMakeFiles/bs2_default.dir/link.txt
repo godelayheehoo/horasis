@@ -1,0 +1,1 @@
+/usr/bin/cc -O3 -DNDEBUG --specs=nosys.specs -nostartfiles -Wl,--script=/home/james/pico-sdk/src/rp2040/boot_stage2/boot_stage2.ld -Wl,-Map=/home/james/projects/led_grid/pico-sdk/src/rp2040/boot_stage2/bs2_default.elf.map CMakeFiles/bs2_default.dir/compile_time_choice.S.o -o bs2_default.elf 
