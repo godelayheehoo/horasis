@@ -70,7 +70,7 @@ CMakeFiles/midi_leds_ws2812_pio_h: ws2812.pio.h
 
 ws2812.pio.h: ../ws2812.pio
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/james/projects/led_grid/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating ws2812.pio.h"
-	pioasm-install/pioasm/pioasm -o c-sdk -v 0 /home/james/projects/led_grid/ws2812.pio /home/james/projects/led_grid/build/ws2812.pio.h
+	pioasm-install/pioasm/pioasm -o c-sdk -v 1 /home/james/projects/led_grid/ws2812.pio /home/james/projects/led_grid/build/ws2812.pio.h
 
 midi_leds_ws2812_pio_h: CMakeFiles/midi_leds_ws2812_pio_h
 midi_leds_ws2812_pio_h: ws2812.pio.h

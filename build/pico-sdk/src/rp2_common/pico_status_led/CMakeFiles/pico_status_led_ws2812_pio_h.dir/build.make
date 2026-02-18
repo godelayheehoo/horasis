@@ -70,7 +70,7 @@ pico-sdk/src/rp2_common/pico_status_led/CMakeFiles/pico_status_led_ws2812_pio_h:
 
 pico-sdk/src/rp2_common/pico_status_led/ws2812.pio.h: /home/james/pico-sdk/src/rp2_common/pico_status_led/ws2812.pio
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/james/projects/led_grid/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating ws2812.pio.h"
-	cd /home/james/projects/led_grid/build/pico-sdk/src/rp2_common/pico_status_led && ../../../../pioasm-install/pioasm/pioasm -o c-sdk -v 0 /home/james/pico-sdk/src/rp2_common/pico_status_led/ws2812.pio /home/james/projects/led_grid/build/pico-sdk/src/rp2_common/pico_status_led/ws2812.pio.h
+	cd /home/james/projects/led_grid/build/pico-sdk/src/rp2_common/pico_status_led && ../../../../pioasm-install/pioasm/pioasm -o c-sdk -v 1 /home/james/pico-sdk/src/rp2_common/pico_status_led/ws2812.pio /home/james/projects/led_grid/build/pico-sdk/src/rp2_common/pico_status_led/ws2812.pio.h
 
 pico_status_led_ws2812_pio_h: pico-sdk/src/rp2_common/pico_status_led/CMakeFiles/pico_status_led_ws2812_pio_h
 pico_status_led_ws2812_pio_h: pico-sdk/src/rp2_common/pico_status_led/ws2812.pio.h

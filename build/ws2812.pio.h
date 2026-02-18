@@ -14,7 +14,7 @@
 
 #define ws2812_wrap_target 0
 #define ws2812_wrap 3
-#define ws2812_pio_version 0
+#define ws2812_pio_version 1
 
 #define ws2812_T1 2
 #define ws2812_T2 5

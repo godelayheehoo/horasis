@@ -14,19 +14,19 @@ CMakeFiles/midi_leds.dir/home/james/pico-sdk/src/common/pico_util/datetime.c.o: 
  /home/james/projects/led_grid/build/generated/pico_base/pico/version.h \
  /home/james/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
  /home/james/projects/led_grid/build/generated/pico_base/pico/config_autogen.h \
- /home/james/pico-sdk/src/boards/include/boards/pico.h \
+ /home/james/pico-sdk/src/boards/include/boards/pico2.h \
  /home/james/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
- /home/james/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
+ /home/james/pico-sdk/src/rp2350/pico_platform/include/pico/platform.h \
  /home/james/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
- /home/james/pico-sdk/src/rp2040/hardware_regs/include/hardware/platform_defs.h \
+ /home/james/pico-sdk/src/rp2350/hardware_regs/include/hardware/platform_defs.h \
  /usr/include/newlib/sys/cdefs.h \
  /usr/include/newlib/machine/_default_types.h \
  /home/james/pico-sdk/src/common/pico_base_headers/include/pico/types.h \
  /home/james/pico-sdk/src/rp2_common/pico_platform_sections/include/pico/platform/sections.h \
  /home/james/pico-sdk/src/rp2_common/pico_platform_panic/include/pico/platform/panic.h \
  /home/james/pico-sdk/src/rp2_common/pico_platform_common/include/pico/platform/common.h \
- /home/james/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/addressmap.h \
- /home/james/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/sio.h \
+ /home/james/pico-sdk/src/rp2350/hardware_regs/include/hardware/regs/addressmap.h \
+ /home/james/pico-sdk/src/rp2350/hardware_regs/include/hardware/regs/sio.h \
  /home/james/pico-sdk/src/common/pico_base_headers/include/pico/error.h \
  /usr/include/newlib/time.h /usr/include/newlib/sys/reent.h \
  /usr/include/newlib/_ansi.h /usr/include/newlib/sys/_types.h \
@@ -38,7 +38,4 @@ CMakeFiles/midi_leds.dir/home/james/pico-sdk/src/common/pico_util/datetime.c.o: 
  /usr/include/newlib/sys/timespec.h /usr/include/newlib/sys/_timespec.h \
  /usr/include/newlib/sys/_pthreadtypes.h /usr/include/newlib/sys/sched.h \
  /usr/include/newlib/machine/types.h /usr/include/newlib/sys/_locale.h \
- /usr/include/newlib/sys/time.h /usr/include/newlib/machine/_time.h \
- /usr/include/newlib/stdio.h \
- /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
- /usr/include/newlib/sys/stdio.h
+ /usr/include/newlib/sys/time.h /usr/include/newlib/machine/_time.h
