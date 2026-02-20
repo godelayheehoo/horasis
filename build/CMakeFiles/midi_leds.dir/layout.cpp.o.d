@@ -2,16 +2,17 @@ CMakeFiles/midi_leds.dir/layout.cpp.o: \
  /home/james/projects/led_grid/layout.cpp \
  /home/james/projects/led_grid/layout.h \
  /home/james/projects/led_grid/config.h \
- /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
- /usr/include/newlib/c++/10.3.1/cstdio \
+ /usr/include/newlib/c++/10.3.1/cstdint \
  /usr/include/newlib/c++/10.3.1/arm-none-eabi/thumb/v8-m.main+fp/softfp/bits/c++config.h \
  /usr/include/newlib/c++/10.3.1/arm-none-eabi/thumb/v8-m.main+fp/softfp/bits/os_defines.h \
  /usr/include/newlib/c++/10.3.1/arm-none-eabi/thumb/v8-m.main+fp/softfp/bits/cpu_defines.h \
  /usr/include/newlib/c++/10.3.1/pstl/pstl_config.h \
- /usr/include/newlib/stdio.h /usr/include/newlib/_ansi.h \
- /usr/include/newlib/newlib.h /usr/include/newlib/_newlib_version.h \
- /usr/include/newlib/sys/config.h /usr/include/newlib/machine/ieeefp.h \
- /usr/include/newlib/sys/features.h /usr/include/newlib/sys/cdefs.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
+ /usr/include/newlib/c++/10.3.1/cstdio /usr/include/newlib/stdio.h \
+ /usr/include/newlib/_ansi.h /usr/include/newlib/newlib.h \
+ /usr/include/newlib/_newlib_version.h /usr/include/newlib/sys/config.h \
+ /usr/include/newlib/machine/ieeefp.h /usr/include/newlib/sys/features.h \
+ /usr/include/newlib/sys/cdefs.h \
  /usr/include/newlib/machine/_default_types.h \
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \

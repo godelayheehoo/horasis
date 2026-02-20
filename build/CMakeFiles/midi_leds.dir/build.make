@@ -1263,6 +1263,20 @@ CMakeFiles/midi_leds.dir/home/james/pico-sdk/src/rp2_common/hardware_dma/dma.c.s
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/midi_leds.dir/home/james/pico-sdk/src/rp2_common/hardware_dma/dma.c.s"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/james/pico-sdk/src/rp2_common/hardware_dma/dma.c -o CMakeFiles/midi_leds.dir/home/james/pico-sdk/src/rp2_common/hardware_dma/dma.c.s
 
+CMakeFiles/midi_leds.dir/home/james/pico-sdk/src/rp2_common/hardware_adc/adc.c.o: CMakeFiles/midi_leds.dir/flags.make
+CMakeFiles/midi_leds.dir/home/james/pico-sdk/src/rp2_common/hardware_adc/adc.c.o: /home/james/pico-sdk/src/rp2_common/hardware_adc/adc.c
+CMakeFiles/midi_leds.dir/home/james/pico-sdk/src/rp2_common/hardware_adc/adc.c.o: CMakeFiles/midi_leds.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/james/projects/led_grid/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_87) "Building C object CMakeFiles/midi_leds.dir/home/james/pico-sdk/src/rp2_common/hardware_adc/adc.c.o"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/midi_leds.dir/home/james/pico-sdk/src/rp2_common/hardware_adc/adc.c.o -MF CMakeFiles/midi_leds.dir/home/james/pico-sdk/src/rp2_common/hardware_adc/adc.c.o.d -o CMakeFiles/midi_leds.dir/home/james/pico-sdk/src/rp2_common/hardware_adc/adc.c.o -c /home/james/pico-sdk/src/rp2_common/hardware_adc/adc.c
+
+CMakeFiles/midi_leds.dir/home/james/pico-sdk/src/rp2_common/hardware_adc/adc.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/midi_leds.dir/home/james/pico-sdk/src/rp2_common/hardware_adc/adc.c.i"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/james/pico-sdk/src/rp2_common/hardware_adc/adc.c > CMakeFiles/midi_leds.dir/home/james/pico-sdk/src/rp2_common/hardware_adc/adc.c.i
+
+CMakeFiles/midi_leds.dir/home/james/pico-sdk/src/rp2_common/hardware_adc/adc.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/midi_leds.dir/home/james/pico-sdk/src/rp2_common/hardware_adc/adc.c.s"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/james/pico-sdk/src/rp2_common/hardware_adc/adc.c -o CMakeFiles/midi_leds.dir/home/james/pico-sdk/src/rp2_common/hardware_adc/adc.c.s
+
 # Object files for target midi_leds
 midi_leds_OBJECTS = \
 "CMakeFiles/midi_leds.dir/main.cpp.o" \
@@ -1350,7 +1364,8 @@ midi_leds_OBJECTS = \
 "CMakeFiles/midi_leds.dir/home/james/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.o" \
 "CMakeFiles/midi_leds.dir/home/james/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.o" \
 "CMakeFiles/midi_leds.dir/home/james/pico-sdk/src/rp2_common/hardware_pio/pio.c.o" \
-"CMakeFiles/midi_leds.dir/home/james/pico-sdk/src/rp2_common/hardware_dma/dma.c.o"
+"CMakeFiles/midi_leds.dir/home/james/pico-sdk/src/rp2_common/hardware_dma/dma.c.o" \
+"CMakeFiles/midi_leds.dir/home/james/pico-sdk/src/rp2_common/hardware_adc/adc.c.o"
 
 # External object files for target midi_leds
 midi_leds_EXTERNAL_OBJECTS =
@@ -1441,11 +1456,12 @@ midi_leds.elf: CMakeFiles/midi_leds.dir/home/james/pico-sdk/lib/tinyusb/src/comm
 midi_leds.elf: CMakeFiles/midi_leds.dir/home/james/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.o
 midi_leds.elf: CMakeFiles/midi_leds.dir/home/james/pico-sdk/src/rp2_common/hardware_pio/pio.c.o
 midi_leds.elf: CMakeFiles/midi_leds.dir/home/james/pico-sdk/src/rp2_common/hardware_dma/dma.c.o
+midi_leds.elf: CMakeFiles/midi_leds.dir/home/james/pico-sdk/src/rp2_common/hardware_adc/adc.c.o
 midi_leds.elf: CMakeFiles/midi_leds.dir/build.make
 midi_leds.elf: pico-sdk/src/rp2350/boot_stage2/CMakeFiles/bs2_default_library.dir/bs2_default_padded_checksummed.S.o
 midi_leds.elf: /home/james/pico-sdk/src/rp2_common/pico_crt0/rp2350/memmap_default.ld
 midi_leds.elf: CMakeFiles/midi_leds.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/james/projects/led_grid/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_87) "Linking CXX executable midi_leds.elf"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/james/projects/led_grid/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_88) "Linking CXX executable midi_leds.elf"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/midi_leds.dir/link.txt --verbose=$(VERBOSE)
 	/usr/bin/arm-none-eabi-objdump -h /home/james/projects/led_grid/build/midi_leds.elf > midi_leds.dis
 	/usr/bin/arm-none-eabi-objdump -d /home/james/projects/led_grid/build/midi_leds.elf >> midi_leds.dis

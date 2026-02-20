@@ -903,6 +903,30 @@ home/james/pico-sdk/src/rp2350/pico_platform/platform.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/midi_leds.dir/build.make CMakeFiles/midi_leds.dir/home/james/pico-sdk/src/rp2350/pico_platform/platform.c.s
 .PHONY : home/james/pico-sdk/src/rp2350/pico_platform/platform.c.s
 
+home/james/pico-sdk/src/rp2_common/hardware_adc/adc.o: home/james/pico-sdk/src/rp2_common/hardware_adc/adc.c.o
+.PHONY : home/james/pico-sdk/src/rp2_common/hardware_adc/adc.o
+
+# target to build an object file
+home/james/pico-sdk/src/rp2_common/hardware_adc/adc.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/midi_leds.dir/build.make CMakeFiles/midi_leds.dir/home/james/pico-sdk/src/rp2_common/hardware_adc/adc.c.o
+.PHONY : home/james/pico-sdk/src/rp2_common/hardware_adc/adc.c.o
+
+home/james/pico-sdk/src/rp2_common/hardware_adc/adc.i: home/james/pico-sdk/src/rp2_common/hardware_adc/adc.c.i
+.PHONY : home/james/pico-sdk/src/rp2_common/hardware_adc/adc.i
+
+# target to preprocess a source file
+home/james/pico-sdk/src/rp2_common/hardware_adc/adc.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/midi_leds.dir/build.make CMakeFiles/midi_leds.dir/home/james/pico-sdk/src/rp2_common/hardware_adc/adc.c.i
+.PHONY : home/james/pico-sdk/src/rp2_common/hardware_adc/adc.c.i
+
+home/james/pico-sdk/src/rp2_common/hardware_adc/adc.s: home/james/pico-sdk/src/rp2_common/hardware_adc/adc.c.s
+.PHONY : home/james/pico-sdk/src/rp2_common/hardware_adc/adc.s
+
+# target to generate assembly for a file
+home/james/pico-sdk/src/rp2_common/hardware_adc/adc.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/midi_leds.dir/build.make CMakeFiles/midi_leds.dir/home/james/pico-sdk/src/rp2_common/hardware_adc/adc.c.s
+.PHONY : home/james/pico-sdk/src/rp2_common/hardware_adc/adc.c.s
+
 home/james/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.o: home/james/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.o
 .PHONY : home/james/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.o
 
@@ -2213,6 +2237,9 @@ help:
 	@echo "... home/james/pico-sdk/src/rp2350/pico_platform/platform.o"
 	@echo "... home/james/pico-sdk/src/rp2350/pico_platform/platform.i"
 	@echo "... home/james/pico-sdk/src/rp2350/pico_platform/platform.s"
+	@echo "... home/james/pico-sdk/src/rp2_common/hardware_adc/adc.o"
+	@echo "... home/james/pico-sdk/src/rp2_common/hardware_adc/adc.i"
+	@echo "... home/james/pico-sdk/src/rp2_common/hardware_adc/adc.s"
 	@echo "... home/james/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.o"
 	@echo "... home/james/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.i"
 	@echo "... home/james/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.s"

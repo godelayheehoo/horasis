@@ -149,6 +149,7 @@ set(CMAKE_ASM_TARGET_INCLUDE_PATH
   "/home/james/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/include"
   "/home/james/pico-sdk/src/rp2_common/hardware_pio/include"
   "/home/james/pico-sdk/src/rp2_common/hardware_dma/include"
+  "/home/james/pico-sdk/src/rp2_common/hardware_adc/include"
   )
 
 # The set of dependency files which are needed:
@@ -182,6 +183,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/james/pico-sdk/src/common/pico_util/pheap.c" "CMakeFiles/midi_leds.dir/home/james/pico-sdk/src/common/pico_util/pheap.c.o" "gcc" "CMakeFiles/midi_leds.dir/home/james/pico-sdk/src/common/pico_util/pheap.c.o.d"
   "/home/james/pico-sdk/src/common/pico_util/queue.c" "CMakeFiles/midi_leds.dir/home/james/pico-sdk/src/common/pico_util/queue.c.o" "gcc" "CMakeFiles/midi_leds.dir/home/james/pico-sdk/src/common/pico_util/queue.c.o.d"
   "/home/james/pico-sdk/src/rp2350/pico_platform/platform.c" "CMakeFiles/midi_leds.dir/home/james/pico-sdk/src/rp2350/pico_platform/platform.c.o" "gcc" "CMakeFiles/midi_leds.dir/home/james/pico-sdk/src/rp2350/pico_platform/platform.c.o.d"
+  "/home/james/pico-sdk/src/rp2_common/hardware_adc/adc.c" "CMakeFiles/midi_leds.dir/home/james/pico-sdk/src/rp2_common/hardware_adc/adc.c.o" "gcc" "CMakeFiles/midi_leds.dir/home/james/pico-sdk/src/rp2_common/hardware_adc/adc.c.o.d"
   "/home/james/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c" "CMakeFiles/midi_leds.dir/home/james/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.o" "gcc" "CMakeFiles/midi_leds.dir/home/james/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.o.d"
   "/home/james/pico-sdk/src/rp2_common/hardware_clocks/clocks.c" "CMakeFiles/midi_leds.dir/home/james/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.o" "gcc" "CMakeFiles/midi_leds.dir/home/james/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.o.d"
   "/home/james/pico-sdk/src/rp2_common/hardware_divider/divider.c" "CMakeFiles/midi_leds.dir/home/james/pico-sdk/src/rp2_common/hardware_divider/divider.c.o" "gcc" "CMakeFiles/midi_leds.dir/home/james/pico-sdk/src/rp2_common/hardware_divider/divider.c.o.d"

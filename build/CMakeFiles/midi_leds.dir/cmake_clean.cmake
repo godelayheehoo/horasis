@@ -57,6 +57,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/midi_leds.dir/home/james/pico-sdk/src/common/pico_util/queue.c.o.d"
   "CMakeFiles/midi_leds.dir/home/james/pico-sdk/src/rp2350/pico_platform/platform.c.o"
   "CMakeFiles/midi_leds.dir/home/james/pico-sdk/src/rp2350/pico_platform/platform.c.o.d"
+  "CMakeFiles/midi_leds.dir/home/james/pico-sdk/src/rp2_common/hardware_adc/adc.c.o"
+  "CMakeFiles/midi_leds.dir/home/james/pico-sdk/src/rp2_common/hardware_adc/adc.c.o.d"
   "CMakeFiles/midi_leds.dir/home/james/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.o"
   "CMakeFiles/midi_leds.dir/home/james/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.o.d"
   "CMakeFiles/midi_leds.dir/home/james/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.o"
