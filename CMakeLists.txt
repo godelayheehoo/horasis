@@ -25,6 +25,7 @@ target_link_libraries(midi_leds
     hardware_dma
     hardware_uart
     hardware_sync
+    hardware_adc
 )
 
 pico_add_extra_outputs(midi_leds)	

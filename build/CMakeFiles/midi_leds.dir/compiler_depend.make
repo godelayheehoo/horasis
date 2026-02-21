@@ -1675,6 +1675,62 @@ CMakeFiles/midi_leds.dir/home/james/pico-sdk/src/rp2350/pico_platform/platform.c
   /home/james/pico-sdk/src/rp2350/hardware_regs/include/hardware/regs/accessctrl.h \
   /home/james/pico-sdk/src/rp2350/hardware_regs/include/hardware/regs/sysinfo.h
 
+CMakeFiles/midi_leds.dir/home/james/pico-sdk/src/rp2_common/hardware_adc/adc.c.o: /home/james/pico-sdk/src/rp2_common/hardware_adc/adc.c \
+  /home/james/pico-sdk/src/common/pico_base_headers/include/pico.h \
+  /home/james/pico-sdk/src/common/pico_base_headers/include/pico/types.h \
+  /home/james/pico-sdk/src/common/pico_base_headers/include/pico/assert.h \
+  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdbool.h \
+  /usr/include/newlib/assert.h \
+  /usr/include/newlib/_ansi.h \
+  /usr/include/newlib/newlib.h \
+  /usr/include/newlib/_newlib_version.h \
+  /usr/include/newlib/sys/config.h \
+  /usr/include/newlib/machine/ieeefp.h \
+  /usr/include/newlib/sys/features.h \
+  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
+  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
+  generated/pico_base/pico/version.h \
+  /home/james/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
+  generated/pico_base/pico/config_autogen.h \
+  /home/james/pico-sdk/src/boards/include/boards/pico2.h \
+  /home/james/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
+  /home/james/pico-sdk/src/rp2350/pico_platform/include/pico/platform.h \
+  /home/james/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
+  /home/james/pico-sdk/src/rp2350/hardware_regs/include/hardware/platform_defs.h \
+  /usr/include/newlib/sys/cdefs.h \
+  /usr/include/newlib/machine/_default_types.h \
+  /home/james/pico-sdk/src/common/pico_base_headers/include/pico/types.h \
+  /home/james/pico-sdk/src/rp2_common/pico_platform_sections/include/pico/platform/sections.h \
+  /home/james/pico-sdk/src/rp2_common/pico_platform_panic/include/pico/platform/panic.h \
+  /home/james/pico-sdk/src/rp2_common/pico_platform_common/include/pico/platform/common.h \
+  /home/james/pico-sdk/src/rp2350/hardware_regs/include/hardware/regs/addressmap.h \
+  /home/james/pico-sdk/src/rp2350/hardware_regs/include/hardware/regs/sio.h \
+  /home/james/pico-sdk/src/common/pico_base_headers/include/pico/error.h \
+  /home/james/pico-sdk/src/rp2_common/hardware_adc/include/hardware/adc.h \
+  /home/james/pico-sdk/src/rp2350/hardware_structs/include/hardware/structs/adc.h \
+  /home/james/pico-sdk/src/rp2_common/hardware_base/include/hardware/address_mapped.h \
+  /home/james/pico-sdk/src/rp2350/hardware_structs/include/hardware/structs/accessctrl.h \
+  /home/james/pico-sdk/src/rp2350/hardware_regs/include/hardware/regs/accessctrl.h \
+  /home/james/pico-sdk/src/rp2350/hardware_regs/include/hardware/regs/adc.h \
+  /home/james/pico-sdk/src/rp2_common/hardware_gpio/include/hardware/gpio.h \
+  /home/james/pico-sdk/src/rp2350/hardware_structs/include/hardware/structs/sio.h \
+  /home/james/pico-sdk/src/rp2350/hardware_structs/include/hardware/structs/interp.h \
+  /home/james/pico-sdk/src/rp2350/hardware_structs/include/hardware/structs/pads_bank0.h \
+  /home/james/pico-sdk/src/rp2350/hardware_regs/include/hardware/regs/pads_bank0.h \
+  /home/james/pico-sdk/src/rp2350/hardware_structs/include/hardware/structs/io_bank0.h \
+  /home/james/pico-sdk/src/rp2350/hardware_regs/include/hardware/regs/io_bank0.h \
+  /home/james/pico-sdk/src/rp2_common/hardware_irq/include/hardware/irq.h \
+  /home/james/pico-sdk/src/rp2350/hardware_regs/include/hardware/regs/intctrl.h \
+  /home/james/pico-sdk/src/rp2350/pico_platform/include/pico/platform/cpu_regs.h \
+  /home/james/pico-sdk/src/rp2350/hardware_regs/include/hardware/regs/m33.h \
+  /home/james/pico-sdk/src/rp2350/hardware_structs/include/hardware/structs/m33.h \
+  /home/james/pico-sdk/src/rp2350/hardware_structs/include/hardware/structs/nvic.h \
+  /home/james/pico-sdk/src/rp2350/hardware_structs/include/hardware/structs/scb.h \
+  /home/james/pico-sdk/src/rp2_common/hardware_gpio/include/hardware/gpio_coproc.h \
+  /home/james/pico-sdk/src/rp2_common/hardware_resets/include/hardware/resets.h \
+  /home/james/pico-sdk/src/rp2350/hardware_structs/include/hardware/structs/resets.h \
+  /home/james/pico-sdk/src/rp2350/hardware_regs/include/hardware/regs/resets.h
+
 CMakeFiles/midi_leds.dir/home/james/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.o: /home/james/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c \
   /home/james/pico-sdk/src/rp2_common/hardware_boot_lock/include/hardware/boot_lock.h \
   /home/james/pico-sdk/src/common/pico_base_headers/include/pico.h \
@@ -3949,12 +4005,13 @@ CMakeFiles/midi_leds.dir/home/james/pico-sdk/src/rp2_common/pico_unique_id/uniqu
 CMakeFiles/midi_leds.dir/layout.cpp.o: ../layout.cpp \
   ../layout.h \
   ../config.h \
-  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
-  /usr/include/newlib/c++/10.3.1/cstdio \
+  /usr/include/newlib/c++/10.3.1/cstdint \
   /usr/include/newlib/c++/10.3.1/arm-none-eabi/thumb/v8-m.main+fp/softfp/bits/c++config.h \
   /usr/include/newlib/c++/10.3.1/arm-none-eabi/thumb/v8-m.main+fp/softfp/bits/os_defines.h \
   /usr/include/newlib/c++/10.3.1/arm-none-eabi/thumb/v8-m.main+fp/softfp/bits/cpu_defines.h \
   /usr/include/newlib/c++/10.3.1/pstl/pstl_config.h \
+  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
+  /usr/include/newlib/c++/10.3.1/cstdio \
   /usr/include/newlib/stdio.h \
   /usr/include/newlib/_ansi.h \
   /usr/include/newlib/newlib.h \
@@ -3993,16 +4050,17 @@ CMakeFiles/midi_leds.dir/leds.cpp.o: ../leds.cpp \
   ../leds.h \
   /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
   ../config.h \
+  /usr/include/newlib/c++/10.3.1/cstdint \
+  /usr/include/newlib/c++/10.3.1/arm-none-eabi/thumb/v8-m.main+fp/softfp/bits/c++config.h \
+  /usr/include/newlib/c++/10.3.1/arm-none-eabi/thumb/v8-m.main+fp/softfp/bits/os_defines.h \
+  /usr/include/newlib/c++/10.3.1/arm-none-eabi/thumb/v8-m.main+fp/softfp/bits/cpu_defines.h \
+  /usr/include/newlib/c++/10.3.1/pstl/pstl_config.h \
   /home/james/pico-sdk/src/rp2_common/hardware_dma/include/hardware/dma.h \
   /home/james/pico-sdk/src/common/pico_base_headers/include/pico.h \
   /home/james/pico-sdk/src/common/pico_base_headers/include/pico/types.h \
   /home/james/pico-sdk/src/common/pico_base_headers/include/pico/assert.h \
   /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdbool.h \
   /usr/include/newlib/c++/10.3.1/cassert \
-  /usr/include/newlib/c++/10.3.1/arm-none-eabi/thumb/v8-m.main+fp/softfp/bits/c++config.h \
-  /usr/include/newlib/c++/10.3.1/arm-none-eabi/thumb/v8-m.main+fp/softfp/bits/os_defines.h \
-  /usr/include/newlib/c++/10.3.1/arm-none-eabi/thumb/v8-m.main+fp/softfp/bits/cpu_defines.h \
-  /usr/include/newlib/c++/10.3.1/pstl/pstl_config.h \
   /usr/include/newlib/assert.h \
   /usr/include/newlib/_ansi.h \
   /usr/include/newlib/newlib.h \
@@ -4075,16 +4133,18 @@ CMakeFiles/midi_leds.dir/leds.cpp.o: ../leds.cpp \
 
 CMakeFiles/midi_leds.dir/main.cpp.o: ../main.cpp \
   ../config.h \
-  /home/james/pico-sdk/src/rp2_common/hardware_sync/include/hardware/sync.h \
+  /usr/include/newlib/c++/10.3.1/cstdint \
+  /usr/include/newlib/c++/10.3.1/arm-none-eabi/thumb/v8-m.main+fp/softfp/bits/c++config.h \
+  /usr/include/newlib/c++/10.3.1/arm-none-eabi/thumb/v8-m.main+fp/softfp/bits/os_defines.h \
+  /usr/include/newlib/c++/10.3.1/arm-none-eabi/thumb/v8-m.main+fp/softfp/bits/cpu_defines.h \
+  /usr/include/newlib/c++/10.3.1/pstl/pstl_config.h \
+  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
+  /home/james/pico-sdk/src/rp2_common/hardware_adc/include/hardware/adc.h \
   /home/james/pico-sdk/src/common/pico_base_headers/include/pico.h \
   /home/james/pico-sdk/src/common/pico_base_headers/include/pico/types.h \
   /home/james/pico-sdk/src/common/pico_base_headers/include/pico/assert.h \
   /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdbool.h \
   /usr/include/newlib/c++/10.3.1/cassert \
-  /usr/include/newlib/c++/10.3.1/arm-none-eabi/thumb/v8-m.main+fp/softfp/bits/c++config.h \
-  /usr/include/newlib/c++/10.3.1/arm-none-eabi/thumb/v8-m.main+fp/softfp/bits/os_defines.h \
-  /usr/include/newlib/c++/10.3.1/arm-none-eabi/thumb/v8-m.main+fp/softfp/bits/cpu_defines.h \
-  /usr/include/newlib/c++/10.3.1/pstl/pstl_config.h \
   /usr/include/newlib/assert.h \
   /usr/include/newlib/_ansi.h \
   /usr/include/newlib/newlib.h \
@@ -4092,7 +4152,6 @@ CMakeFiles/midi_leds.dir/main.cpp.o: ../main.cpp \
   /usr/include/newlib/sys/config.h \
   /usr/include/newlib/machine/ieeefp.h \
   /usr/include/newlib/sys/features.h \
-  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
   /usr/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
   generated/pico_base/pico/version.h \
   /home/james/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
@@ -4111,9 +4170,27 @@ CMakeFiles/midi_leds.dir/main.cpp.o: ../main.cpp \
   /home/james/pico-sdk/src/rp2350/hardware_regs/include/hardware/regs/addressmap.h \
   /home/james/pico-sdk/src/rp2350/hardware_regs/include/hardware/regs/sio.h \
   /home/james/pico-sdk/src/common/pico_base_headers/include/pico/error.h \
+  /home/james/pico-sdk/src/rp2350/hardware_structs/include/hardware/structs/adc.h \
   /home/james/pico-sdk/src/rp2_common/hardware_base/include/hardware/address_mapped.h \
   /home/james/pico-sdk/src/rp2350/hardware_structs/include/hardware/structs/accessctrl.h \
   /home/james/pico-sdk/src/rp2350/hardware_regs/include/hardware/regs/accessctrl.h \
+  /home/james/pico-sdk/src/rp2350/hardware_regs/include/hardware/regs/adc.h \
+  /home/james/pico-sdk/src/rp2_common/hardware_gpio/include/hardware/gpio.h \
+  /home/james/pico-sdk/src/rp2350/hardware_structs/include/hardware/structs/sio.h \
+  /home/james/pico-sdk/src/rp2350/hardware_structs/include/hardware/structs/interp.h \
+  /home/james/pico-sdk/src/rp2350/hardware_structs/include/hardware/structs/pads_bank0.h \
+  /home/james/pico-sdk/src/rp2350/hardware_regs/include/hardware/regs/pads_bank0.h \
+  /home/james/pico-sdk/src/rp2350/hardware_structs/include/hardware/structs/io_bank0.h \
+  /home/james/pico-sdk/src/rp2350/hardware_regs/include/hardware/regs/io_bank0.h \
+  /home/james/pico-sdk/src/rp2_common/hardware_irq/include/hardware/irq.h \
+  /home/james/pico-sdk/src/rp2350/hardware_regs/include/hardware/regs/intctrl.h \
+  /home/james/pico-sdk/src/rp2350/pico_platform/include/pico/platform/cpu_regs.h \
+  /home/james/pico-sdk/src/rp2350/hardware_regs/include/hardware/regs/m33.h \
+  /home/james/pico-sdk/src/rp2350/hardware_structs/include/hardware/structs/m33.h \
+  /home/james/pico-sdk/src/rp2350/hardware_structs/include/hardware/structs/nvic.h \
+  /home/james/pico-sdk/src/rp2350/hardware_structs/include/hardware/structs/scb.h \
+  /home/james/pico-sdk/src/rp2_common/hardware_gpio/include/hardware/gpio_coproc.h \
+  /home/james/pico-sdk/src/rp2_common/hardware_sync/include/hardware/sync.h \
   /home/james/pico-sdk/src/rp2_common/hardware_sync_spin_lock/include/hardware/sync/spin_lock.h \
   ../layout.h \
   ../leds.h \
@@ -4125,21 +4202,6 @@ CMakeFiles/midi_leds.dir/main.cpp.o: ../main.cpp \
   /home/james/pico-sdk/src/rp2_common/hardware_timer/include/hardware/timer.h \
   /home/james/pico-sdk/src/rp2350/hardware_structs/include/hardware/structs/timer.h \
   /home/james/pico-sdk/src/rp2350/hardware_regs/include/hardware/regs/timer.h \
-  /home/james/pico-sdk/src/rp2350/hardware_regs/include/hardware/regs/intctrl.h \
-  /home/james/pico-sdk/src/rp2_common/hardware_gpio/include/hardware/gpio.h \
-  /home/james/pico-sdk/src/rp2350/hardware_structs/include/hardware/structs/sio.h \
-  /home/james/pico-sdk/src/rp2350/hardware_structs/include/hardware/structs/interp.h \
-  /home/james/pico-sdk/src/rp2350/hardware_structs/include/hardware/structs/pads_bank0.h \
-  /home/james/pico-sdk/src/rp2350/hardware_regs/include/hardware/regs/pads_bank0.h \
-  /home/james/pico-sdk/src/rp2350/hardware_structs/include/hardware/structs/io_bank0.h \
-  /home/james/pico-sdk/src/rp2350/hardware_regs/include/hardware/regs/io_bank0.h \
-  /home/james/pico-sdk/src/rp2_common/hardware_irq/include/hardware/irq.h \
-  /home/james/pico-sdk/src/rp2350/pico_platform/include/pico/platform/cpu_regs.h \
-  /home/james/pico-sdk/src/rp2350/hardware_regs/include/hardware/regs/m33.h \
-  /home/james/pico-sdk/src/rp2350/hardware_structs/include/hardware/structs/m33.h \
-  /home/james/pico-sdk/src/rp2350/hardware_structs/include/hardware/structs/nvic.h \
-  /home/james/pico-sdk/src/rp2350/hardware_structs/include/hardware/structs/scb.h \
-  /home/james/pico-sdk/src/rp2_common/hardware_gpio/include/hardware/gpio_coproc.h \
   /home/james/pico-sdk/src/rp2_common/hardware_uart/include/hardware/uart.h \
   /home/james/pico-sdk/src/rp2350/hardware_structs/include/hardware/structs/uart.h \
   /home/james/pico-sdk/src/rp2350/hardware_regs/include/hardware/regs/uart.h \
@@ -4173,16 +4235,17 @@ CMakeFiles/midi_leds.dir/midi.cpp.o: ../midi.cpp \
   ../midi.h \
   /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
   ../config.h \
+  /usr/include/newlib/c++/10.3.1/cstdint \
+  /usr/include/newlib/c++/10.3.1/arm-none-eabi/thumb/v8-m.main+fp/softfp/bits/c++config.h \
+  /usr/include/newlib/c++/10.3.1/arm-none-eabi/thumb/v8-m.main+fp/softfp/bits/os_defines.h \
+  /usr/include/newlib/c++/10.3.1/arm-none-eabi/thumb/v8-m.main+fp/softfp/bits/cpu_defines.h \
+  /usr/include/newlib/c++/10.3.1/pstl/pstl_config.h \
   /home/james/pico-sdk/src/rp2_common/hardware_uart/include/hardware/uart.h \
   /home/james/pico-sdk/src/common/pico_base_headers/include/pico.h \
   /home/james/pico-sdk/src/common/pico_base_headers/include/pico/types.h \
   /home/james/pico-sdk/src/common/pico_base_headers/include/pico/assert.h \
   /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdbool.h \
   /usr/include/newlib/c++/10.3.1/cassert \
-  /usr/include/newlib/c++/10.3.1/arm-none-eabi/thumb/v8-m.main+fp/softfp/bits/c++config.h \
-  /usr/include/newlib/c++/10.3.1/arm-none-eabi/thumb/v8-m.main+fp/softfp/bits/os_defines.h \
-  /usr/include/newlib/c++/10.3.1/arm-none-eabi/thumb/v8-m.main+fp/softfp/bits/cpu_defines.h \
-  /usr/include/newlib/c++/10.3.1/pstl/pstl_config.h \
   /usr/include/newlib/assert.h \
   /usr/include/newlib/_ansi.h \
   /usr/include/newlib/newlib.h \
@@ -4305,6 +4368,16 @@ ws2812.pio.h:
 
 /home/james/pico-sdk/src/rp2_common/pico_float/include/pico/float.h:
 
+/usr/lib/gcc/arm-none-eabi/10.3.1/include/float.h:
+
+/home/james/pico-sdk/src/rp2_common/pico_float/float_math.c:
+
+/home/james/pico-sdk/src/rp2_common/pico_flash/flash.c:
+
+/home/james/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c:
+
+/home/james/pico-sdk/src/rp2_common/pico_bootrom/include/pico/bootrom/sf_table.h:
+
 /home/james/pico-sdk/src/common/hardware_claim/include/hardware/claim.h:
 
 /home/james/pico-sdk/src/rp2_common/hardware_vreg/include/hardware/vreg.h:
@@ -4387,6 +4460,8 @@ ws2812.pio.h:
 
 /home/james/pico-sdk/src/common/pico_sync/include/pico/sem.h:
 
+/usr/include/newlib/c++/10.3.1/cstdint:
+
 /home/james/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c:
 
 /home/james/pico-sdk/src/rp2350/hardware_structs/include/hardware/structs/pio.h:
@@ -4450,6 +4525,8 @@ generated/pico_base/pico/config_autogen.h:
 /home/james/pico-sdk/lib/tinyusb/src/tusb.c:
 
 /usr/include/newlib/sys/features.h:
+
+/home/james/pico-sdk/src/rp2350/hardware_structs/include/hardware/structs/adc.h:
 
 ../layout.h:
 
@@ -4611,8 +4688,6 @@ generated/pico_base/pico/config_autogen.h:
 
 /usr/include/newlib/machine/_types.h:
 
-/home/james/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c:
-
 /usr/include/newlib/sys/lock.h:
 
 /home/james/pico-sdk/src/rp2_common/hardware_gpio/gpio.c:
@@ -4630,10 +4705,6 @@ generated/pico_base/pico/config_autogen.h:
 /home/james/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c:
 
 /usr/include/newlib/sys/string.h:
-
-../layout.cpp:
-
-/usr/include/newlib/sys/types.h:
 
 /usr/include/newlib/sys/cdefs.h:
 
@@ -4656,8 +4727,6 @@ generated/pico_base/pico/config_autogen.h:
 /home/james/pico-sdk/src/rp2350/hardware_regs/include/hardware/regs/dma.h:
 
 /home/james/pico-sdk/src/rp2350/hardware_structs/include/hardware/structs/ticks.h:
-
-/home/james/pico-sdk/src/rp2_common/pico_flash/flash.c:
 
 /home/james/pico-sdk/src/rp2350/hardware_structs/include/hardware/structs/pads_bank0.h:
 
@@ -4706,6 +4775,14 @@ generated/pico_base/pico/config_autogen.h:
 /home/james/pico-sdk/src/common/pico_util/include/pico/util/queue.h:
 
 /home/james/pico-sdk/src/rp2350/hardware_structs/include/hardware/structs/pads_qspi.h:
+
+../layout.cpp:
+
+/usr/include/newlib/sys/types.h:
+
+/home/james/pico-sdk/src/rp2_common/hardware_adc/adc.c:
+
+/home/james/pico-sdk/src/rp2_common/hardware_adc/include/hardware/adc.h:
 
 /home/james/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c:
 
@@ -4770,6 +4847,8 @@ generated/pico_base/pico/config_autogen.h:
 /home/james/pico-sdk/src/rp2_common/hardware_uart/uart.c:
 
 /home/james/pico-sdk/src/rp2_common/hardware_uart/include/hardware/uart.h:
+
+/home/james/pico-sdk/src/rp2350/hardware_regs/include/hardware/regs/adc.h:
 
 /home/james/pico-sdk/src/rp2350/hardware_regs/include/hardware/regs/powman.h:
 
@@ -4848,9 +4927,3 @@ generated/pico_base/pico/version.h:
 /usr/include/newlib/math.h:
 
 /home/james/pico-sdk/src/rp2_common/pico_double/include/pico/double.h:
-
-/home/james/pico-sdk/src/rp2_common/pico_bootrom/include/pico/bootrom/sf_table.h:
-
-/usr/lib/gcc/arm-none-eabi/10.3.1/include/float.h:
-
-/home/james/pico-sdk/src/rp2_common/pico_float/float_math.c:

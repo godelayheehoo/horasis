@@ -1,6 +1,7 @@
 #ifndef CONFIG_H
 #define CONFIG_H
 
+#include <cstdint>
 // ============================================================================
 // Pin Assignments
 // ============================================================================
@@ -15,6 +16,7 @@
 
 // Reset Button (Active Low, Pull-Up)
 #define RESET_BTN_PIN 3
+#define RESET_BUTTON_FLASH_TIME 250
 
 // Stacked Layout:
 // Panel 1 (Top): 32x8
@@ -24,9 +26,13 @@
 #define PANEL_HEIGHT 16
 #define LED_COUNT (PANEL_WIDTH * PANEL_HEIGHT) // 512 LEDs
 
-// Global brightness (0-255). 255 is max brightness.
-// 128 is ~50%. Lower values reduce power consumption.
-#define LED_BRIGHTNESS 128
+// Global brightness (0-255).
+extern uint8_t global_brightness;
+
+// Potentiometer Configuration
+#define POT_PIN 26
+#define POT_ADC_NUM 0          // ADC0 is on GPIO26
+#define ENABLE_POTENTIOMETER 1 // Set to 0 if no pot connected
 
 // ============================================================================
 // MIDI Configuration

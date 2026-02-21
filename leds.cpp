@@ -11,13 +11,16 @@ static PIO pio = pio0;
 static uint sm = 0;
 static int dma_chan;
 
+// Global brightness
+uint8_t global_brightness = 128;
+
 // ============================================================================
 // Coordinate Mapping
 // ============================================================================
 
 // Convert logical (x, y) to physical LED index
 // Assumes serpentine wiring: even rows left-to-right, odd rows right-to-left
-// NOTE: This may need adjustment when hardware arrives!
+// NOTE: This may need adjustment based on specific hardware!
 // 64x8 grid made of two 8x32 panels.
 //
 // Panel 1 (Left, x=0..31):
@@ -125,9 +128,9 @@ void leds_setPixel(int x, int y, uint32_t rgb) {
     uint8_t b = rgb & 0xFF;
 
     // Scale by brightness
-    r = (r * LED_BRIGHTNESS) >> 8;
-    g = (g * LED_BRIGHTNESS) >> 8;
-    b = (b * LED_BRIGHTNESS) >> 8;
+    r = (r * global_brightness) >> 8;
+    g = (g * global_brightness) >> 8;
+    b = (b * global_brightness) >> 8;
 
     // Convert to GRB for WS2812 (0x00GGRRBB)
     uint32_t grb = ((uint32_t)g << 16) | ((uint32_t)r << 8) | b;

@@ -13,23 +13,59 @@ int activeChannelCount = 0;
 // Color Palette
 // ============================================================================
 
+//// original colors
+// static const uint32_t CHANNEL_COLORS[16] = {
+//     0xFF0000, // ch 0  Red
+//     0xFF8000, // ch 1  Orange
+//     0xFFFF00, // ch 2  Yellow
+//     0x80FF00, // ch 3  Chartreuse
+//     0x00FF00, // ch 4  Green
+//     0x00FF80, // ch 5  Spring Green
+//     0x00FFFF, // ch 6  Cyan
+//     0x0080FF, // ch 7  Azure
+//     0x0000FF, // ch 8  Blue
+//     0x8000FF, // ch 9  Violet
+//     0xFF00FF, // ch 10 Magenta
+//     0xFF0080, // ch 11 Rose
+//     0x8B4513, // ch 12 SaddleBrown
+//     0x008080, // ch 13 Teal
+//     0x800080, // ch 14 Purple
+//     0x708090, // ch 15 SlateGray
+// };
+
+//// Colors tuned to match my LEDs
 static const uint32_t CHANNEL_COLORS[16] = {
-    0xFF0000, // ch 0  Red
-    0xFF8000, // ch 1  Orange
-    0xFFFF00, // ch 2  Yellow
-    0x80FF00, // ch 3  Chartreuse
-    0x00FF00, // ch 4  Green
-    0x00FF80, // ch 5  Spring Green
-    0x00FFFF, // ch 6  Cyan
-    0x0080FF, // ch 7  Azure
-    0x0000FF, // ch 8  Blue
-    0x8000FF, // ch 9  Violet
-    0xFF00FF, // ch 10 Magenta
-    0xFF0080, // ch 11 Rose
-    0x8B4513, // ch 12 SaddleBrown
-    0x008080, // ch 13 Teal
-    0x800080, // ch 14 Purple
-    0x708090, // ch 15 SlateGray
+    0xFF7A00, // ch 1  Amber
+
+    0xFF6BFF, // ch 2  Light pinkish purple (requested)
+
+    0x0037FF, // ch 3  Strong blue (requested)
+
+    0xFFFF00, // ch 4  Yellow
+
+    0x00B84A, // ch 5  Slightly blueish green (requested)
+
+    0xFF00FF, // ch 6  Magenta (requested)
+
+    0xFF0000, // ch 7  Strong red (requested)
+
+    0x00E6FF, // ch 8  Cyan
+
+    0x6A00FF, // ch 9  Violet
+
+    0x73FF00, // ch10  Chartreuse
+
+    0xFF2E73, // ch11  Rose
+
+    0x0073FF, // ch12  Azure
+
+    0x00FF00, // ch13  Pure green
+
+    0xFF7300, // ch14  Orange
+
+    0x006060, // ch15  Teal
+
+    0x9A9A9A, // ch16  Light gray
 };
 
 // ============================================================================

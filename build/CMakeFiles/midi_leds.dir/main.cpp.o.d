@@ -83,4 +83,8 @@ CMakeFiles/midi_leds.dir/main.cpp.o: \
  /usr/include/newlib/sys/_sigset.h /usr/include/newlib/sys/_timeval.h \
  /usr/include/newlib/sys/timespec.h /usr/include/newlib/sys/_timespec.h \
  /usr/include/newlib/sys/_pthreadtypes.h /usr/include/newlib/sys/sched.h \
- /usr/include/newlib/machine/types.h /usr/include/newlib/sys/stdio.h
+ /usr/include/newlib/machine/types.h /usr/include/newlib/sys/stdio.h \
+ /usr/include/newlib/c++/10.3.1/cstdlib \
+ /usr/include/newlib/c++/10.3.1/stdlib.h /usr/include/newlib/stdlib.h \
+ /usr/include/newlib/machine/stdlib.h /usr/include/newlib/alloca.h \
+ /usr/include/newlib/c++/10.3.1/bits/std_abs.h

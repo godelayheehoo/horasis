@@ -1,10 +1,12 @@
 #include "config.h"
+#include "hardware/adc.h"
 #include "hardware/sync.h"
 #include "layout.h"
 #include "leds.h"
 #include "midi.h"
 #include "pico/stdlib.h"
 #include <cstdio>
+#include <cstdlib>
 
 // ============================================================================
 // MIDI Callbacks
@@ -96,6 +98,13 @@ int main() {
   gpio_set_dir(RESET_BTN_PIN, GPIO_IN);
   gpio_pull_up(RESET_BTN_PIN);
 
+#if ENABLE_POTENTIOMETER
+  adc_init();
+  adc_gpio_init(POT_PIN);
+  adc_select_input(POT_ADC_NUM);
+  printf("Potentiometer Enabled on Pin %d (ADC %d)\n", POT_PIN, POT_ADC_NUM);
+#endif
+
   // Main render loop
   while (true) {
     // Limit frame rate to ~60 FPS (16ms)
@@ -103,6 +112,11 @@ int main() {
     static uint32_t last_frame = 0;
     uint32_t now = to_ms_since_boot(get_absolute_time());
     if (now - last_frame >= 16) {
+#if ENABLE_POTENTIOMETER
+      uint16_t adc_val = adc_read();
+      global_brightness = adc_val >> 4; // Map 12-bit (0-4095) to 8-bit (0-255)
+#endif
+
       // Critical Section: Disable interrupts during transmission to prevent
       // timing glitches
       uint32_t irq_status = save_and_disable_interrupts();
@@ -130,9 +144,19 @@ int main() {
         sleep_ms(10);
       }
       layout_reset();
+      
+      // Flash random colors
+      for (int y = 0; y < PANEL_HEIGHT; y++) {
+        for (int x = 0; x < PANEL_WIDTH; x++) {
+          uint32_t color = ((rand() % 128) << 16) | ((rand() % 128) << 8) | (rand() % 128);
+          leds_setPixel(x, y, color);
+        }
+      }
+      leds_show();
+      sleep_ms(RESET_BUTTON_FLASH_TIME); // Visual feedback
+
       leds_clear();
       leds_show();
-      sleep_ms(200); // Visual feedback
     }
   }
 
