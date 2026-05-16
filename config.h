@@ -19,12 +19,11 @@
 #define RESET_BUTTON_FLASH_TIME 250
 
 // Stacked Layout:
-// Panel 1 (Top): 32x8
-// Panel 2 (Bottom): 32x8
-// Total: 32x16
+// Multiple 32x8 panels stacked vertically.
+// Total dimensions: 32 x PANEL_HEIGHT
 #define PANEL_WIDTH 32
 #define PANEL_HEIGHT 16
-#define LED_COUNT (PANEL_WIDTH * PANEL_HEIGHT) // 512 LEDs
+#define LED_COUNT (PANEL_WIDTH * PANEL_HEIGHT)
 
 // Global brightness (0-255).
 extern uint8_t global_brightness;

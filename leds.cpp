@@ -5,7 +5,7 @@
 #include "pico/stdlib.h"
 #include "ws2812.pio.h"
 
-// Internal framebuffer: 512 LEDs × 4 bytes (GRB + padding) = 2KB
+// Internal framebuffer: LED_COUNT LEDs × 4 bytes (GRB + padding)
 static uint32_t framebuffer[LED_COUNT];
 static PIO pio = pio0;
 static uint sm = 0;
@@ -21,73 +21,43 @@ uint8_t global_brightness = 128;
 // Convert logical (x, y) to physical LED index
 // Assumes serpentine wiring: even rows left-to-right, odd rows right-to-left
 // NOTE: This may need adjustment based on specific hardware!
-// 64x8 grid made of two 8x32 panels.
+// Stacked Layout:
+// Multiple 32x8 panels stacked vertically.
+// Total dimensions: 32 x PANEL_HEIGHT
 //
-// Panel 1 (Left, x=0..31):
-//   Starts at Top-Right (x=31, y=0).
-//   Snakes Left.
-//   Col 31 goes DOWN. Col 30 goes UP.
+// Generalized Multi-Panel Stack (32x8 panels)
+// Vertical Column-Major Serpentine Wiring
 //
-// Panel 2 (Right, x=32..63):
-//   Starts at Top-Left (x=32, y=0).
-//   Snakes Right.
-//   Col 32 goes DOWN. Col 33 goes UP.
-// 32x16 Grid (Two 8x32 Panels Stacked)
-// Vertical Column-Major Wiring
-//
-// Panel 1 (Top, y=0..7):
-//   Logical x=0..31.
-//   Physically starts at Top-Right, fills Leftwards.
-//   Indices 0..255.
-//
-// Panel 2 (Bottom, y=8..15):
-//   Logical x=0..31.
-//   Physically starts at Top-Left, fills Rightwards.
-//   Indices 256..511.
+// Panels are stacked vertically. Even panels (0, 2, ...) start Top-Right
+// and snake Left. Odd panels (1, 3, ...) start Top-Left and snake Right.
+// This allows for continuous data chaining (DO -> DI) between panels.
 
 static int xyToIndex(int x, int y) {
   if (x < 0 || x >= PANEL_WIDTH || y < 0 || y >= PANEL_HEIGHT) {
     return -1;
   }
 
-  int panel_base = 0;
-  int local_y = y;
+  const int PANEL_H = 8; // Each physical panel is 8 pixels high
+  int panel_idx = y / PANEL_H;
+  int local_y = y % PANEL_H;
+  int panel_base = panel_idx * (PANEL_WIDTH * PANEL_H);
 
-  // Check which panel (Top or Bottom)
-  if (y < 8) {
-    // === PANEL 1 (Top) ===
-    // Indices 0..255
-    // Maps x=0..31 to Physical Cols 31..0
-    panel_base = 0;
-    local_y = y;
-
-    // Physical Column (31 - x)
-    int col_idx = 31 - x;
-    int base = panel_base + (col_idx * 8);
-
-    // Serpentine
-    if (col_idx % 2 == 0) {
-      return base + local_y; // Down
-    } else {
-      return base + (7 - local_y); // Up
-    }
+  int col_idx;
+  // Panels snake: Even panels (0, 2, ...) flow Right-to-Left, 
+  // Odd panels (1, 3, ...) flow Left-to-Right.
+  if (panel_idx % 2 == 0) {
+    col_idx = (PANEL_WIDTH - 1) - x;
   } else {
-    // === PANEL 2 (Bottom) ===
-    // Indices 256..511
-    // Maps x=0..31 to Physical Cols 0..31
-    panel_base = 256;
-    local_y = y - 8; // Offset y to 0..7
+    col_idx = x;
+  }
 
-    // Physical Column (x)
-    int col_idx = x;
-    int base = panel_base + (col_idx * 8);
+  int base = panel_base + (col_idx * PANEL_H);
 
-    // Serpentine
-    if (col_idx % 2 == 0) {
-      return base + local_y; // Down
-    } else {
-      return base + (7 - local_y); // Up
-    }
+  // Serpentine wiring within the columns of a single panel
+  if (col_idx % 2 == 0) {
+    return base + local_y; // Down
+  } else {
+    return base + (PANEL_H - 1 - local_y); // Up
   }
 }
 
