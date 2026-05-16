@@ -30,10 +30,23 @@ A responsive, high-performance LED grid visualizer powered by a Raspberry Pi Pic
 
 ### Physical Layout
 
-The code is configured for a specific 32x16 physical layout composed of two 8x32 panels:
-1.  **Top Panel (Rows 0-7)**: Physically mounted with the first LED at the Top-Right.
-2.  **Bottom Panel (Rows 8-15)**: Physically mounted with the first LED at the Top-Left.
-See `leds.cpp` for the exact serpentine mapping logic.
+The code supports a flexible number of 32x8 physical panels stacked vertically. 
+- **Configuration**: Adjust `PANEL_HEIGHT` in `config.h` (must be a multiple of 8).
+- **Mapping**: The software automatically handles a "snaking" vertical layout where even-indexed panels flow Right-to-Left and odd-indexed panels flow Left-to-Right.
+- **Internal Wiring**: Each panel is assumed to have serpentine column wiring.
+
+## Performance & Scalability
+
+As the number of LEDs increases, the time required to transmit data also increases linearly (~30µs per LED).
+
+| Grid Size | Total LEDs | Update Time | Max Refresh Rate |
+|-----------|------------|-------------|------------------|
+| 32 x 16   | 512        | ~15.4 ms    | ~65 FPS          |
+| 32 x 32   | 1024       | ~30.7 ms    | ~32 FPS          |
+| 32 x 64   | 2048       | ~61.4 ms    | ~16 FPS          |
+
+> [!WARNING]
+> **MIDI Buffer Overflow Risk**: Because the current LED driver is "blocking," high LED counts (e.g., 32x64) will prevent the CPU from polling MIDI for long periods. If a burst of MIDI messages arrives during an update, the hardware UART buffer (32 bytes) may overflow, leading to lost notes. For very large grids, it is recommended to move the rendering to the second CPU core.
 
 ## Building the Project
 
